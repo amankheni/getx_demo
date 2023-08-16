@@ -1,0 +1,10 @@
+import 'package:get/get.dart';
+import 'package:getx_demo/counterapp_controller.dart';
+import 'package:getx_demo/incre&decrement/incrementdecrement_controller.dart';
+
+class InitController {
+  static get getAllController {
+    Get.put(CounterController());
+    Get.put(IncreAndDecrementController());
+  }
+}
