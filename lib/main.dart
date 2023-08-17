@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:getx_demo/init_controller.dart';
 
-import 'incre&decrement/incrementdecrement_ui.dart';
+import 'form_ui.dart';
 
 void main() {
   InitController.getAllController;
@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const IncrementDecrementUi(),
+      home: const FormUi(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
