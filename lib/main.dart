@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:getx_demo/init_controller.dart';
+import 'package:getx_demo/swepcolors.dart';
 
 import 'form_ui.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const FormUi(),
+      home: const SwepColorUi(),
       debugShowCheckedModeBanner: false,
     );
   }
