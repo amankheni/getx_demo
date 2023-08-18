@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:getx_demo/crud.dart';
 import 'package:getx_demo/init_controller.dart';
-import 'package:getx_demo/swepcolors.dart';
-
-import 'form_ui.dart';
 
 void main() {
   InitController.getAllController;
@@ -19,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const SwepColorUi(),
+      home: const CrudUi(),
       debugShowCheckedModeBanner: false,
     );
   }
