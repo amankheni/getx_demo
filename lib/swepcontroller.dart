@@ -11,6 +11,7 @@ class ColorController extends GetxController {
     Colors.black,
     Colors.amber,
     Colors.deepPurple,
+    Colors.orange,
   ].obs;
 
   RxInt? oldIndex, newIndex;
