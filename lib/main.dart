@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:getx_demo/crud.dart';
+
 import 'package:getx_demo/init_controller.dart';
+import 'package:getx_demo/simple_crudui.dart';
 
 void main() {
   InitController.getAllController;
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const CrudUi(),
+      home: const SimpleCrudeDemoUi(),
       debugShowCheckedModeBanner: false,
     );
   }
