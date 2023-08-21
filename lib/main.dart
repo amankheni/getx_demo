@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:getx_demo/init_controller.dart';
-import 'package:getx_demo/simple_crudui.dart';
+
+import 'package:getx_demo/tictactoi_ui.dart';
 
 void main() {
   InitController.getAllController;
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const SimpleCrudeDemoUi(),
+      home: const TicTacToi(),
       debugShowCheckedModeBanner: false,
     );
   }
