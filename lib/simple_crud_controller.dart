@@ -32,6 +32,10 @@ class SimpleCrudContoller extends GetxController {
     gender.value = value;
   }
 
+  void genderUpdateMethod(String value) {
+    genderUpdate.value = value;
+  }
+
   void cricketMethod(bool value) {
     isCricket.value = value;
   }
@@ -76,7 +80,7 @@ class SimpleCrudContoller extends GetxController {
     isFootball.value = false;
     isSinging.value = false;
     selectedAge.value = 0;
-    selectStream!.value = '';
+    //selectStream!.value = '';
   }
 
   void addUserData() {
@@ -96,16 +100,18 @@ class SimpleCrudContoller extends GetxController {
       'age': selectedAge.value,
       'gender': gender.value,
       'hobby': List.from(selectedHobby.map((e) => e)),
-      'stream': selectStream,
+      //'stream': selectStream,
     });
   }
 
   void clearUpdateMethod() {
     txtUpdateNameEditingController.value.clear();
     txtUpdateSurNameEditingController.value.clear();
+    isCricketUpdate.value = false;
+    isFootballUpdate.value = false;
+    isSingingUpdate.value = false;
     selectedAgeUpdate.value = 0;
-    genderUpdate.value = 'gender';
-    selectedStreamUpdate!.value = '';
+    //selectedStreamUpdate!.value = '';
   }
 
   void onTapUpdate() {
@@ -131,6 +137,7 @@ class SimpleCrudContoller extends GetxController {
 
   void updateMethod() {
     selectedHobby.clear();
+    userData.refresh();
     if (isCricketUpdate.value == true) {
       selectedHobby.add('Cricket');
     }
@@ -143,12 +150,12 @@ class SimpleCrudContoller extends GetxController {
     userData[selectedIndex.value]['name'] =
         txtUpdateNameEditingController.value.text;
     userData[selectedIndex.value]['surName'] =
-        txtUpdateNameEditingController.value.text;
-    userData[selectedIndex.value]['age'] = selectedAgeUpdate;
-    userData[selectedIndex.value]['gender'] = genderUpdate;
+        txtUpdateSurNameEditingController.value.text;
+    userData[selectedIndex.value]['age'] = selectedAgeUpdate.value;
+    userData[selectedIndex.value]['gender'] = genderUpdate.value;
     userData[selectedIndex.value]['hobby'] =
         List.from(selectedHobby.map((e) => e));
-    userData[selectedIndex.value]['stream'] = selectedStreamUpdate;
+    // userData[selectedIndex.value]['stream'] = selectedStreamUpdate;
   }
 
   void updateButton(dynamic context) {
@@ -161,10 +168,12 @@ class SimpleCrudContoller extends GetxController {
 
   void deleteButton(dynamic context, index) {
     userData.removeAt(index);
+    userData.refresh();
     Navigator.pop(context);
   }
 
   void cancleDeleteButton(dynamic context) {
+    userData.refresh();
     Navigator.pop(context);
   }
 }
