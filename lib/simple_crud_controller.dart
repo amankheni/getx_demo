@@ -6,20 +6,19 @@ class SimpleCrudContoller extends GetxController {
   final txtSurNameEditingController = TextEditingController().obs;
   final txtUpdateNameEditingController = TextEditingController().obs;
   final txtUpdateSurNameEditingController = TextEditingController().obs;
-  RxString gender = 'gender'.obs;
-  RxString male = 'male'.obs;
-  RxString feMale = 'feMale'.obs;
-  RxString genderUpdate = 'gender'.obs;
-  RxString maleUpdate = 'male'.obs;
-  RxString feMaleUpdate = 'feMale'.obs;
-  RxBool isCricket = false.obs;
-  RxBool isFootball = false.obs;
-  RxBool isSinging = false.obs;
-  RxBool isCricketUpdate = false.obs;
-  RxBool isFootballUpdate = false.obs;
-  RxBool isSingingUpdate = false.obs;
-  RxDouble selectedAge = 0.0.obs;
-  RxDouble selectedAgeUpdate = 0.0.obs;
+  RxString gender = 'gender'.obs,
+      male = 'male'.obs,
+      feMale = 'feMale'.obs,
+      genderUpdate = 'gender'.obs,
+      maleUpdate = 'male'.obs,
+      feMaleUpdate = 'feMale'.obs;
+  RxBool isCricket = false.obs,
+      isFootball = false.obs,
+      isSinging = false.obs,
+      isCricketUpdate = false.obs,
+      isFootballUpdate = false.obs,
+      isSingingUpdate = false.obs;
+  RxDouble selectedAge = 0.0.obs, selectedAgeUpdate = 0.0.obs;
   RxList stream = ['science', 'commerce', 'art'].obs;
   RxList streamUpdate = ['science', 'commerce', 'art'].obs;
   RxString? selectStream;
